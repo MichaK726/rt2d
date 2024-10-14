@@ -22,7 +22,7 @@ void Player::update(float deltaTime)
 	Agent::update(deltaTime);
 	timer += deltaTime;
 	if (timer >= 1.0f) {
-		std::cout << "Player health: " << getHealth() << std::endl;
+		//std::cout << "Player health: " << getHealth() << std::endl;
 		timer = 0.0f;
 	}
 

@@ -10,10 +10,13 @@ GameScene::GameScene() : Scene()
 
 	background = new Background();
 
+	WaveSpawner* waveSpawner = new WaveSpawner(player);
+
 	// create the scene 'tree'
 	// add player to this Scene as a child.
 	this->addChild(background);
 	this->addChild(player);
+	this->addChild(waveSpawner);
 }
 
 

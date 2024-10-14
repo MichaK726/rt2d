@@ -18,6 +18,7 @@
 #include "enemy.h"
 #include "dashingenemy.h"
 #include "shootingenemy.h"
+#include "wavespawner.h"
 
  /// @brief The GameScene class is the Scene implementation.
 class GameScene : public Scene
@@ -45,6 +46,7 @@ private:
 	Player* player;
 	// @brief The background
 	Background* background;
+
 
 	/// @brief This determines the difficulty of the game that the user has selected.
 	int difficulty_index;
