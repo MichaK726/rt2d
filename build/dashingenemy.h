@@ -5,6 +5,7 @@
 class DashingEnemy : public Enemy
 {
 public:
+	/// @brief Constructor
 	DashingEnemy(Entity* target);
 
 	/// @brief update is automatically called every frame

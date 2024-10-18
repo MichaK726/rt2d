@@ -5,7 +5,7 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 
 WaveSpawner::WaveSpawner(Entity* target) {
 
-	this->target_ = target;
+	target_ = target;
 
 	// Initialize Waves
 
@@ -14,12 +14,13 @@ WaveSpawner::WaveSpawner(Entity* target) {
 
 	for (int i = 0; i < 10; i++) {
 		ShootingEnemy* enemy = new ShootingEnemy(target_);
-		enemy->position.x = 25 * i;
+        enemy->position.y = 300;
+		enemy->position.x = 384 + 25 * i;
 		wave1.push_back(enemy);
 	}
 
     for (int i = 0; i < 10; i++) {
-        ShootingEnemy* enemy = new ShootingEnemy(target_);
+        DashingEnemy* enemy = new DashingEnemy(target_);
         enemy->position.x = 25 * i;
         wave2.push_back(enemy);
     }

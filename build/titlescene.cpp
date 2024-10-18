@@ -62,11 +62,11 @@ void TitleScene::update(float deltaTime)
 	// Difficulty Selection
 	// ###############################################################
 
-	if (input()->getKeyUp(KeyCode::W) || input()->getKeyUp(KeyCode::Up) && index > 0) {
+	if (input()->getKeyUp(KeyCode::Up) && index > 0) {
 		difficulty_selector->position.y -= 75;
 		index--;
 	}
-	else if (input()->getKeyUp(KeyCode::S) || input()->getKeyUp(KeyCode::Down) && index < 2) {
+	else if (input()->getKeyUp(KeyCode::Down) && index < 2) {
 		difficulty_selector->position.y += 75;
 		index++;
 	}

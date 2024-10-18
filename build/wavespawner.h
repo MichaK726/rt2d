@@ -24,7 +24,6 @@ public:
 	void SpawnEnemy();
 private:
 	std::vector<std::vector<Enemy*>> waves;
-	bool isSpawning;
 
 	float spawnTimer = 0.0f;
 

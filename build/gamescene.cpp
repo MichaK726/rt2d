@@ -7,6 +7,7 @@ using namespace std;
 GameScene::GameScene() : Scene()
 {
 	player = new Player();
+	player->position = Point2(SWIDTH / 2, SHEIGHT - 256);
 
 	background = new Background();
 

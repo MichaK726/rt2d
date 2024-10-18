@@ -77,6 +77,7 @@ void ShootingEnemy::updateTargetAngle()
 }
 
 
-void ShootingEnemy::ReturnOffscreen() {
+void ShootingEnemy::ReturnOffscreen() 
+{
 
 }

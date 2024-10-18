@@ -93,7 +93,7 @@ void Player::update(float deltaTime)
 			canShoot = false;
 			// Create bullet and spawn it on the player.
 			Bullet* bullet = new Bullet(this);
-			bullet->position = this->position - Point2(0, 35);
+			bullet->position = this->position;
 			bullet->rotation.z = this->rotation.z;
 
 			// Add as child for rendering.

@@ -2,7 +2,8 @@
 
 DashingEnemy::DashingEnemy(Entity* target) : Enemy("assets/enemy_plane.tga")
 {
-	this->target_ = target;
+	target_ = target;
+	std::cout << "Player Position: " << target_->position << std::endl;
 	this->scale = Point2(2.0f, 2.0f);
 	updateTargetPosition();
 	updateTargetAngle();
@@ -14,7 +15,9 @@ DashingEnemy::DashingEnemy(Entity* target) : Enemy("assets/enemy_plane.tga")
 void DashingEnemy::update(float deltaTime) {
 	Enemy::update(deltaTime);
 
-	if (target_ != nullptr) {
+
+
+	if (target_ != nullptr) {	
 
 		// TODO Implement enemy that dives diagonally to the player, shoots once and leaves.
 		if (isCharging)
@@ -43,6 +46,7 @@ void DashingEnemy::update(float deltaTime) {
 		timer += deltaTime;
 		if (timer >= 1.0f)
 		{
+			std::cout << "Target Position" << targetPosition << std::endl;
 			timer = 0.0f;
 		}
 	}
