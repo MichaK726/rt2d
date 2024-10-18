@@ -5,6 +5,8 @@ ShootingEnemy::ShootingEnemy(Entity* target) : Enemy("assets/enemy_plane.tga")
 	this->target_ = target;
 	this->scale = Point2(2.0f, 2.0f);
 	updateTargetPosition();
+	updateTargetAngle();
+	this->rotation.z = targetAngle + PI / 2;
 	chargeDelay = (rand() % 100 + 70) / 100;
 }
 
@@ -16,6 +18,7 @@ void ShootingEnemy::update(float deltaTime) {
 	// TODO Implement enemy that dives diagonally to the player, shoots once and leaves.
 
 	if (isCharging) {
+		updateTargetPosition();
 		chargingTimer += deltaTime;
 	}
 
