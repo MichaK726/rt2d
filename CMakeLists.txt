@@ -158,6 +158,30 @@ IF(MAKE_START)
 		start/myentity.h
 		start/myscene.cpp
 		start/myscene.h
+		start/agent.cpp
+		start/agent.h
+		start/background.cpp
+		start/background.h
+		start/basicentity.cpp
+		start/basicentity.h
+		start/bullet.cpp
+		start/bullet.h
+		start/dashingenemy.cpp
+		start/dashingenemy.h
+		start/enemy.cpp
+		start/enemy.h
+		start/gamescene.cpp
+		start/gamescene.h
+		start/image.cpp
+		start/image.h
+		start/player.cpp
+		start/player.h
+		start/shootingenemy.cpp
+		start/shootingenemy.h
+		start/titlescene.cpp
+		start/titlescene.h
+		start/wavespawner.cpp
+		start/wavespawner.h
 	)
 	target_link_libraries(start
 		${ALL_GRAPHICS_LIBS}
