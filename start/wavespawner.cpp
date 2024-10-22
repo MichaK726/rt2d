@@ -64,7 +64,7 @@ void WaveSpawner::SpawnEnemy() {
     // Check if there are more waves to process
     if (currentWaveIndex < waves.size()) {
         // Add Current Enemy to scene
-        this->parent()->addChild(waves[currentWaveIndex][currentEnemyIndex]);
+        this->addChild(waves[currentWaveIndex][currentEnemyIndex]);
         // Move to the next enemy
         currentEnemyIndex++;
     }

@@ -29,6 +29,5 @@ void Background::update(float deltaTime)
 			scrolling_ = false;
 			position.y = 2160.0f;
 		}
-
 	}
 }

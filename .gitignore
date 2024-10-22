@@ -3,3 +3,5 @@ build
 *.DS_*
 .vs*
 /build
+/build_bak
+/build

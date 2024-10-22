@@ -110,11 +110,12 @@ void GameScene::update(float deltaTime)
 void GameScene::calculateCollisions() {
 	for (int i = 0; i < children().size(); i++)
 	{
-		for (int j = 0; j < children().size(); j++)
+		for (int j = 0; j < waveSpawner->children().size(); j++)
 		{
 			Bullet* currentBullet = dynamic_cast<Bullet*>(children()[i]);
-			Enemy* currentEnemy = dynamic_cast<Enemy*>(children()[j]);
+			Enemy* currentEnemy = dynamic_cast<Enemy*>(waveSpawner->children()[j]);
 			if (currentBullet && currentEnemy) {
+				std::cout << "Valid Enemy and Bullet found!" << std::endl;
 				if (currentBullet->getOwner() == currentEnemy)
 				{
 					continue;
@@ -140,9 +141,9 @@ void GameScene::calculateCollisions() {
 		}
 	}
 
-	for (int i = 0; i < children().size(); i++)
+	for (int i = 0; i < waveSpawner->children().size(); i++)
 	{
-		Enemy* currentEnemy = dynamic_cast<Enemy*>(children()[i]);
+		Enemy* currentEnemy = dynamic_cast<Enemy*>(waveSpawner->children()[i]);
 
 		if (player && currentEnemy) {
 			Sprite* currentEnemySprite = currentEnemy->sprite();

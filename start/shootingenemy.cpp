@@ -44,7 +44,7 @@ void ShootingEnemy::update(float deltaTime) {
 		bullet->rotation.z = this->rotation.z;
 
 		// Add as child for rendering.
-		this->parent()->addChild(bullet);
+		this->parent()->parent()->addChild(bullet);
 
 	}
 
